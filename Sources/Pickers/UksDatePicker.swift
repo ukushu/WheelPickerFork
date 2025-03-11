@@ -89,24 +89,22 @@ public struct UksDatePicker: View {
     
     @ViewBuilder
     func PopoverBody() -> some View {
-        VStack {
-            HStack {
-                ForEach(osDateFormat, id: \.self) { format in
-                    switch format {
-                    case .day:
-                        DayPicker()
-                            .frame(minWidth: 80)
-                            #if os(macOS)
-                            #endif
-                    case .month:
-                        MonthPicker()
-                            .frame(minWidth: 80)
-                    case .year:
-                        YearPicker()
-                            .frame(minWidth: 80)
-                    case .unknown:
-                        Text(verbatim: "Error")
-                    }
+        HStack {
+            ForEach(osDateFormat, id: \.self) { format in
+                switch format {
+                case .day:
+                    DayPicker()
+                        .frame(minWidth: 80)
+                        #if os(macOS)
+                        #endif
+                case .month:
+                    MonthPicker()
+                        .frame(minWidth: 80)
+                case .year:
+                    YearPicker()
+                        .frame(minWidth: 80)
+                case .unknown:
+                    Text(verbatim: "Error")
                 }
             }
         }
@@ -115,7 +113,6 @@ public struct UksDatePicker: View {
     
     func YearPicker() -> some View {
         FiniteWheelPicker(selection: $year, items: yearRange, displayBg: false) { value in
-            // value may be nil (If the label is out of range)
             if let value = value {
                 Text(String(value))
             } else {
@@ -126,7 +123,6 @@ public struct UksDatePicker: View {
     
     func MonthPicker() -> some View {
         FiniteWheelPicker(selection: $month, items: monthRange, displayBg: false) { value in
-            // value may be nil (If the label is out of range)
             if let value = value {
                 Text("\(value)")
             } else {
@@ -140,7 +136,6 @@ public struct UksDatePicker: View {
         let dayRange: [Int] = (1...date.daysInMonth).map{ $0 }
         
         FiniteWheelPicker(selection: $day, items: dayRange, displayBg: false) { value in
-            // value may be nil (If the label is out of range)
             if let value = value {
                 Text("\(value)")
             } else {
@@ -210,19 +205,4 @@ enum DateFormatType {
     case year
     
     case unknown
-}
-
-fileprivate extension NSEvent {
-    var uksDeltaScrollY: Int {
-        let delta = self.scrollingDeltaY
-//        let maxIndex = 10
-        
-        let sensitivity: CGFloat = 0.15 // Lower value = slower scrolling
-        let stepSize = max(1, Int(abs(delta) * sensitivity)) // Larger step for big scrolls
-        let direction = delta > 0 ? -1 : 1
-        
-        print("\(self.scrollingDeltaY) - \((stepSize * direction))")
-        
-        return (stepSize * direction)
-    }
 }
