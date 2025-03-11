@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D32C8862D80E70200E5B600 /* UksDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D32C8852D80E6FE00E5B600 /* UksDatePicker.swift */; };
+		1D32C8892D80E75100E5B600 /* Essentials in Frameworks */ = {isa = PBXBuildFile; productRef = 1D32C8882D80E75100E5B600 /* Essentials */; };
+		1D32C88C2D80E77000E5B600 /* MoreSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1D32C88B2D80E77000E5B600 /* MoreSwiftUI */; };
 		287D0A6E1C4B73BD004566D6 /* WheelPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D0A6D1C4B73BD004566D6 /* WheelPickerTests.swift */; };
 		28F828881C494B2C00330CF4 /* WheelPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F8287D1C494B2C00330CF4 /* WheelPicker.framework */; };
 		28F8289A1C494B4200330CF4 /* WheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F828991C494B4200330CF4 /* WheelPicker.swift */; };
@@ -22,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1D32C87E2D80E4F000E5B600 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D32C87A2D80E4EF00E5B600 /* WheelTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D32C8682D80E4ED00E5B600;
+			remoteInfo = WheelTest;
+		};
 		28F828891C494B2C00330CF4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 28F828741C494B2C00330CF4 /* Project object */;
@@ -31,7 +41,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1D32C88E2D80EA4700E5B600 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1D32C87A2D80E4EF00E5B600 /* WheelTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WheelTest.xcodeproj; path = WheelTest/WheelTest.xcodeproj; sourceTree = "<group>"; };
+		1D32C8852D80E6FE00E5B600 /* UksDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UksDatePicker.swift; sourceTree = "<group>"; };
 		287D0A6D1C4B73BD004566D6 /* WheelPickerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WheelPickerTests.swift; path = Tests/WheelPickerTests.swift; sourceTree = SOURCE_ROOT; };
 		28F8287D1C494B2C00330CF4 /* WheelPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WheelPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F828821C494B2C00330CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D32C8892D80E75100E5B600 /* Essentials in Frameworks */,
+				1D32C88C2D80E77000E5B600 /* MoreSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,9 +95,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D32C87B2D80E4EF00E5B600 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D32C87F2D80E4F000E5B600 /* WheelTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		28F828731C494B2C00330CF4 = {
 			isa = PBXGroup;
 			children = (
+				1D32C87A2D80E4EF00E5B600 /* WheelTest.xcodeproj */,
 				28F828971C494B4200330CF4 /* Sources */,
 				28F8288B1C494B2C00330CF4 /* Tests */,
 				28F828821C494B2C00330CF4 /* Info.plist */,
@@ -130,6 +166,7 @@
 		97B4D4C6278C5E5D00644866 /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
+				1D32C8852D80E6FE00E5B600 /* UksDatePicker.swift */,
 				97B4D4C7278C5E7D00644866 /* CircularWheelPicker.swift */,
 				97B4D4CB278C603A00644866 /* DateWheelPicker.swift */,
 				97B4D4C9278C5F6500644866 /* FiniteWheelPicker.swift */,
@@ -166,6 +203,7 @@
 				28F828791C494B2C00330CF4 /* Frameworks */,
 				28F8287A1C494B2C00330CF4 /* Headers */,
 				28F8287B1C494B2C00330CF4 /* Resources */,
+				1D32C88E2D80EA4700E5B600 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,8 +260,18 @@
 				Base,
 			);
 			mainGroup = 28F828731C494B2C00330CF4;
+			packageReferences = (
+				1D32C8872D80E75100E5B600 /* XCRemoteSwiftPackageReference "essentials" */,
+				1D32C88A2D80E77000E5B600 /* XCRemoteSwiftPackageReference "moreswiftui" */,
+			);
 			productRefGroup = 28F8287E1C494B2C00330CF4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1D32C87B2D80E4EF00E5B600 /* Products */;
+					ProjectRef = 1D32C87A2D80E4EF00E5B600 /* WheelTest.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				28F8287C1C494B2C00330CF4 /* WheelPicker */,
@@ -231,6 +279,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1D32C87F2D80E4F000E5B600 /* WheelTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = WheelTest.app;
+			remoteRef = 1D32C87E2D80E4F000E5B600 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		28F8287B1C494B2C00330CF4 /* Resources */ = {
@@ -257,6 +315,7 @@
 				97B4D4BC278C4CA100644866 /* FiniteWheelPickerDataSource.swift in Sources */,
 				97B4D4CA278C5F6500644866 /* FiniteWheelPicker.swift in Sources */,
 				97B4D4F92875CB6200644866 /* FeedbackManager.swift in Sources */,
+				1D32C8862D80E70200E5B600 /* UksDatePicker.swift in Sources */,
 				97B4D4BE278C4CE900644866 /* CircularWheelPickerDataSource.swift in Sources */,
 				97B4D4BA278C4C5700644866 /* WheelPickerDataSource.swift in Sources */,
 				97B4D4CC278C603A00644866 /* DateWheelPicker.swift in Sources */,
@@ -392,7 +451,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2,6";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -411,11 +471,18 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wataku-city.WheelPicker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -433,11 +500,18 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wataku-city.WheelPicker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,7 +523,11 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wataku-city.WheelPickerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -462,7 +540,11 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wataku-city.WheelPickerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -500,6 +582,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1D32C8872D80E75100E5B600 /* XCRemoteSwiftPackageReference "essentials" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@gitlab.com:sergiy.vynnychenko/essentials.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		1D32C88A2D80E77000E5B600 /* XCRemoteSwiftPackageReference "moreswiftui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@gitlab.com:UKS/moreswiftui.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1D32C8882D80E75100E5B600 /* Essentials */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D32C8872D80E75100E5B600 /* XCRemoteSwiftPackageReference "essentials" */;
+			productName = Essentials;
+		};
+		1D32C88B2D80E77000E5B600 /* MoreSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D32C88A2D80E77000E5B600 /* XCRemoteSwiftPackageReference "moreswiftui" */;
+			productName = MoreSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 28F828741C494B2C00330CF4 /* Project object */;
 }

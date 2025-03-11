@@ -1,11 +1,3 @@
-//
-//  CircularWheelPickerDataSource.swift
-//  WheelPicker
-//
-//  Created by tokiensis on 2022/01/10.
-//  Copyright © 2022 Wataku-City. All rights reserved.
-//
-
 import SwiftUI
 
 public struct CircularWheelPickerDataSource<T: Hashable>: WheelPickerDataSource {
