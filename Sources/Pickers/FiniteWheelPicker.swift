@@ -6,13 +6,15 @@ public struct FiniteWheelPicker<V: Hashable, Label: View>: View {
     @State private var dataSource: FiniteWheelPickerDataSource<V>
     var accessibilityText: ((V) -> String)?
     var label: (V?) -> Label
+    let displayBg: Bool
     
-    public init(selection: Binding<V>, items: [V], accessibilityText: ((V) -> String)? = nil, @ViewBuilder label: @escaping (V?) -> Label) {
+    public init(selection: Binding<V>, items: [V], displayBg: Bool = true, accessibilityText: ((V) -> String)? = nil, @ViewBuilder label: @escaping (V?) -> Label) {
         let dataSource = FiniteWheelPickerDataSource(items: items, initialSelection: selection.wrappedValue)
         _selection = selection
         _dataSource = State(initialValue: dataSource)
         self.accessibilityText = accessibilityText
         self.label = label
+        self.displayBg = displayBg
     }
     
     public var body: some View {
@@ -33,6 +35,8 @@ public struct FiniteWheelPicker<V: Hashable, Label: View>: View {
                     return
                 }
             }
-            .background(SelectedPositionBackground())
+            .if(displayBg) {
+                $0.background(SelectedPositionBackground())
+            }
     }
 }

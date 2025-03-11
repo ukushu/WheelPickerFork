@@ -96,6 +96,8 @@ public struct UksDatePicker: View {
                     case .day:
                         DayPicker()
                             .frame(minWidth: 80)
+                            #if os(macOS)
+                            #endif
                     case .month:
                         MonthPicker()
                             .frame(minWidth: 80)
@@ -108,10 +110,11 @@ public struct UksDatePicker: View {
                 }
             }
         }
+        .background(SelectedPositionBackground())
     }
     
     func YearPicker() -> some View {
-        FiniteWheelPicker(selection: $year, items: yearRange) { value in
+        FiniteWheelPicker(selection: $year, items: yearRange, displayBg: false) { value in
             // value may be nil (If the label is out of range)
             if let value = value {
                 Text(String(value))
@@ -122,7 +125,7 @@ public struct UksDatePicker: View {
     }
     
     func MonthPicker() -> some View {
-        FiniteWheelPicker(selection: $month, items: monthRange) { value in
+        FiniteWheelPicker(selection: $month, items: monthRange, displayBg: false) { value in
             // value may be nil (If the label is out of range)
             if let value = value {
                 Text("\(value)")
@@ -136,7 +139,7 @@ public struct UksDatePicker: View {
     func DayPicker() -> some View {
         let dayRange: [Int] = (1...date.daysInMonth).map{ $0 }
         
-        FiniteWheelPicker(selection: $day, items: dayRange) { value in
+        FiniteWheelPicker(selection: $day, items: dayRange, displayBg: false) { value in
             // value may be nil (If the label is out of range)
             if let value = value {
                 Text("\(value)")
@@ -207,4 +210,19 @@ enum DateFormatType {
     case year
     
     case unknown
+}
+
+fileprivate extension NSEvent {
+    var uksDeltaScrollY: Int {
+        let delta = self.scrollingDeltaY
+//        let maxIndex = 10
+        
+        let sensitivity: CGFloat = 0.15 // Lower value = slower scrolling
+        let stepSize = max(1, Int(abs(delta) * sensitivity)) // Larger step for big scrolls
+        let direction = delta > 0 ? -1 : 1
+        
+        print("\(self.scrollingDeltaY) - \((stepSize * direction))")
+        
+        return (stepSize * direction)
+    }
 }

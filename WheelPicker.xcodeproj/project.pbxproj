@@ -10,6 +10,7 @@
 		1D32C8862D80E70200E5B600 /* UksDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D32C8852D80E6FE00E5B600 /* UksDatePicker.swift */; };
 		1D32C8892D80E75100E5B600 /* Essentials in Frameworks */ = {isa = PBXBuildFile; productRef = 1D32C8882D80E75100E5B600 /* Essentials */; };
 		1D32C88C2D80E77000E5B600 /* MoreSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1D32C88B2D80E77000E5B600 /* MoreSwiftUI */; };
+		1D32C8952D80EE8900E5B600 /* ScrollWheelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D32C8942D80ED6C00E5B600 /* ScrollWheelModifier.swift */; };
 		287D0A6E1C4B73BD004566D6 /* WheelPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D0A6D1C4B73BD004566D6 /* WheelPickerTests.swift */; };
 		28F828881C494B2C00330CF4 /* WheelPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F8287D1C494B2C00330CF4 /* WheelPicker.framework */; };
 		28F8289A1C494B4200330CF4 /* WheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F828991C494B4200330CF4 /* WheelPicker.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		1D32C87A2D80E4EF00E5B600 /* WheelTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WheelTest.xcodeproj; path = WheelTest/WheelTest.xcodeproj; sourceTree = "<group>"; };
 		1D32C8852D80E6FE00E5B600 /* UksDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UksDatePicker.swift; sourceTree = "<group>"; };
+		1D32C8942D80ED6C00E5B600 /* ScrollWheelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollWheelModifier.swift; sourceTree = "<group>"; };
 		287D0A6D1C4B73BD004566D6 /* WheelPickerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WheelPickerTests.swift; path = Tests/WheelPickerTests.swift; sourceTree = SOURCE_ROOT; };
 		28F8287D1C494B2C00330CF4 /* WheelPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WheelPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F828821C494B2C00330CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				97B4D4C6278C5E5D00644866 /* Pickers */,
 				97B4D4C1278C56ED00644866 /* ViewParts */,
 				28F828991C494B4200330CF4 /* WheelPicker.swift */,
+				1D32C8942D80ED6C00E5B600 /* ScrollWheelModifier.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				97B4D4BC278C4CA100644866 /* FiniteWheelPickerDataSource.swift in Sources */,
 				97B4D4CA278C5F6500644866 /* FiniteWheelPicker.swift in Sources */,
 				97B4D4F92875CB6200644866 /* FeedbackManager.swift in Sources */,
+				1D32C8952D80EE8900E5B600 /* ScrollWheelModifier.swift in Sources */,
 				1D32C8862D80E70200E5B600 /* UksDatePicker.swift in Sources */,
 				97B4D4BE278C4CE900644866 /* CircularWheelPickerDataSource.swift in Sources */,
 				97B4D4BA278C4C5700644866 /* WheelPickerDataSource.swift in Sources */,
